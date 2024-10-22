@@ -1,27 +1,27 @@
-package Selenium_Assignment;
+package ex_selenium.ex_19102024;
 
 import io.qameta.allure.internal.shadowed.jackson.annotation.JsonTypeInfo;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
-public class Assignment_01 {
-
-    @Test
-    public void Assignment() {
+public class Selenium018 {
+    public static void main(String[] args) {
         EdgeOptions edgeOptions = new EdgeOptions();
         edgeOptions.addArguments("--start-maximized");
         WebDriver driver = new EdgeDriver(edgeOptions);
         driver.get("https://katalon-demo-cura.herokuapp.com/");
-
-        System.out.println(driver.getPageSource());
-
-        Assert.assertEquals(driver.getTitle(), "CURA Healthcare Service");
-        Assert.assertEquals(driver.getCurrentUrl(), "https://katalon-demo-cura.herokuapp.com/");
-
+        System.out.println(driver.getTitle());
+        System.out.println(driver.getCurrentUrl());
+        if (driver.getPageSource().contains("CURA Healthcare Service")) {
+            System.out.println("Verified");
+            Assert.assertTrue(true);
+        }else {
+            Assert.assertTrue(false);
+        }
         driver.quit();
-    }
 
+    }
 }

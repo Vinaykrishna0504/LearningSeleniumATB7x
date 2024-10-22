@@ -1,11 +1,8 @@
 package ex_selenium.ex_19102024;
 
-import org.openqa.selenium.SearchContext;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 
-public class Seleniun017 {
+public class Selenium017 {
     public static void main(String[] args) {
 
         // Selenium 3.0 - JSON WIRE Protocol
@@ -15,6 +12,9 @@ public class Seleniun017 {
 
 
        //  Selenium 4.0 - Selenoum Manager - W3C Protocol
+
+        ChromeDriver driver = new ChromeDriver();
+        driver.get("https://sdet.live");
 
     }
 }
