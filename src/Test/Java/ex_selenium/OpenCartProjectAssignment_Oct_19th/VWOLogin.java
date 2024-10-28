@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class VWOLogin {
@@ -23,8 +24,16 @@ public class VWOLogin {
         WebElement password = driver.findElement(By.id("login-password"));
         password.sendKeys("Atb12345");
 
-        WebElement
+        WebElement SigninButton = driver.findElement(By.id("js-login-btn"));
+        SigninButton.click();
 
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        Assert.assertEquals(driver.getCurrentUrl(),"https://app.vwo.com/#/dashboard");
     }
 
 
