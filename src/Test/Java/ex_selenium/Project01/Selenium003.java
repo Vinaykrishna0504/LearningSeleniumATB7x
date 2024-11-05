@@ -1,4 +1,4 @@
-package ex_selenium;
+package ex_selenium.Project01;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;

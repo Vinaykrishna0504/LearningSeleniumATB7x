@@ -1,15 +1,6 @@
-package ex_selenium;
+package ex_selenium.Project01;
 
-import org.checkerframework.checker.units.qual.C;
-import org.openqa.selenium.SearchContext;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
-
-import java.rmi.Remote;
 
 public class Selenium004 {
 

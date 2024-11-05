@@ -1,4 +1,4 @@
-package ex_selenium;
+package ex_selenium.Project01;
 
 public class Selenium005 {
 
