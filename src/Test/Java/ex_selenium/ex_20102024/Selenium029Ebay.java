@@ -49,14 +49,12 @@ public class Selenium029Ebay {
         List<WebElement> searchTitlePrices = driver.findElements(By.xpath("//span[@class='s-item__price']"));
 
         //min -> Loop where
-        int size = Math.min(searchTitles.size(),searchTitlePrices.size());
+        int size = Math.max(searchTitles.size(),searchTitlePrices.size());
         for (int i = 0;i< size; i++ ){
             System.out.println("Title:" + searchTitles.get(i).getText()+ " || " + "Price:" + searchTitlePrices.get(i).getText());
             System.out.println();
 
             //Max price or Min price - Print it
-
-            // Same above try in flipkart, search iphone 15 pro and print tilt and prices
 
         }
     }
